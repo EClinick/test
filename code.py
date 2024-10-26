@@ -1,8 +1,6 @@
 def inefficient_function(data):
-    seen = set()
     result = []
     for item in data:
-        if item not in seen:
-            seen.add(item)
+        if item not in result:
             result.append(item)
     return result
