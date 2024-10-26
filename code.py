@@ -7,7 +7,5 @@ def slow_sum(numbers):
 
 
 def slow_multiply(numbers):
-    product = 1
-    for num in numbers:
-        product *= num
-    return product
+    import math
+    return math.prod(numbers)
