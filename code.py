@@ -1,11 +1,13 @@
 def inefficient_function(data):
-    return list(dict.fromkeys(data))
+    return sorted(set(data))
+
 
 def slow_sum(numbers):
     total = 0
     for num in numbers:
         total += num
     return total
+
 
 def slow_multiply(numbers):
     product = 1
