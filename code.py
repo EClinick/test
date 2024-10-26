@@ -9,7 +9,5 @@ def slow_sum(numbers):
 
 
 def slow_multiply(numbers):
-    result = 1
-    for n in numbers:
-        result *= n
-    return result
+    import math
+    return math.prod(numbers)
