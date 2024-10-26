@@ -1,16 +1,19 @@
-# code.py
-
 def inefficient_function(data):
-    return list(dict.fromkeys(data))
+    seen = set()
+    result = []
+    for value in data:
+        if value not in seen:
+            result.append(value)
+            seen.add(value)
+    return tuple(sorted(result))
+
 
 def slow_sum(numbers):
-    total = 0
-    for num in numbers:
-        total += num
-    return total
+    return sum(numbers)
+
 
 def slow_multiply(numbers):
-    product = 1
+    product = 1 if numbers else None
     for num in numbers:
         product *= num
     return product
