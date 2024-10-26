@@ -1,5 +1,5 @@
 def inefficient_function(data):
-    return list(dict.fromkeys(data))
+    return sorted(set(data))
 
 
 def slow_sum(numbers):
