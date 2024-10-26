@@ -1,13 +1,14 @@
 def inefficient_function(data):
-    return sorted(set(data))
-
+    return list(dict.fromkeys(data))
 
 def slow_sum(numbers):
-    if not numbers:
-        raise ValueError('Input list cannot be empty')
-    return sum(n for n in numbers)
-
+    total = 0
+    for num in numbers:
+        total += num
+    return total
 
 def slow_multiply(numbers):
-    import math
-    return math.prod(numbers)
+    product = 1
+    for num in numbers:
+        product *= num
+    return product
