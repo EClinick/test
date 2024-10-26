@@ -3,7 +3,9 @@ def inefficient_function(data):
 
 
 def slow_sum(numbers):
-    return sum(numbers)
+    if not numbers:
+        raise ValueError('Input list cannot be empty')
+    return sum(n for n in numbers)
 
 
 def slow_multiply(numbers):
