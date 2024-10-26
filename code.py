@@ -1,17 +1,14 @@
-# code.py
-
 def inefficient_function(data):
-    result = []
-    for item in data:
-        if item not in result:
-            result.append(item)
-    return result
+    seen = set()
+    return [item for item in data if not (item in seen or seen.add(item))]
+
 
 def slow_sum(numbers):
     total = 0
     for num in numbers:
         total += num
     return total
+
 
 def slow_multiply(numbers):
     product = 1
