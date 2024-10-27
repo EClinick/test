@@ -1,19 +1,20 @@
-def inefficient_function(data):
-    seen = set()
-    result = []
-    for value in data:
-        if value not in seen:
-            result.append(value)
-            seen.add(value)
-    return tuple(sorted(result))
+def inefficient_function(data: Iterable[str]) ->Tuple[str, ...]:
+    unique_data = set(data)
+    sorted_data = tuple(sorted(unique_data))
+    return sorted_data
 
 
 def slow_sum(numbers):
-    return sum(numbers)
+    result = 0
+    for num in numbers:
+        result += num
+    return result
 
 
-def slow_multiply(numbers):
-    product = 1 if numbers else None
+def slow_multiply(numbers: list[int]) ->(int | None):
+    if not all(isinstance(num, int) for num in numbers):
+        return None
+    product = 1
     for num in numbers:
         product *= num
     return product
