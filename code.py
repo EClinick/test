@@ -4,7 +4,8 @@ def inefficient_function(data):
 
 
 def slow_sum(numbers):
-    return op.iadd(0, numbers)
+    """Return the sum of all elements in the iterable."""
+    return sum(num for num in numbers)
 
 
 def slow_multiply(numbers):
