@@ -3,7 +3,12 @@ def inefficient_function(data):
 
 
 def slow_sum(numbers):
-    return sum(numbers)
+    if not numbers:
+        return 0
+    result = 0
+    for num in numbers:
+        result += num
+    return result
 
 
 def slow_multiply(numbers):
