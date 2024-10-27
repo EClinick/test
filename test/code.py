@@ -11,7 +11,7 @@ def slow_sum(numbers):
 def slow_multiply(numbers: list[int]) ->(int | None):
     if not all(isinstance(num, int) for num in numbers):
         return None
-    product = 1
+    result = 1
     for num in numbers:
-        product *= num
-    return product
+        result *= num
+    return result
