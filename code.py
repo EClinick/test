@@ -14,7 +14,4 @@ def slow_sum(numbers):
 def slow_multiply(numbers):
     if not numbers:
         raise ValueError('Input list is empty')
-    result = 1
-    for num in numbers:
-        result *= num
-    return result
+    return 1 if len(numbers) == 1 else prod(numbers)
