@@ -5,10 +5,7 @@ def inefficient_function(data: Iterable[str]) ->Tuple[str, ...]:
 
 
 def slow_sum(numbers):
-    result = 0
-    for num in numbers:
-        result += num
-    return result
+    return sum(numbers)
 
 
 def slow_multiply(numbers: list[int]) ->(int | None):
