@@ -1,5 +1,11 @@
 def inefficient_function(data):
-    return list(dict.fromkeys(data))
+    seen = set()
+    result = []
+    for item in data:
+        if item not in seen:
+            result.append(item)
+            seen.add(item)
+    return result
 
 
 def slow_sum(numbers):
