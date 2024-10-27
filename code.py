@@ -9,10 +9,8 @@ def inefficient_function(data):
 
 
 def slow_sum(numbers):
-    total = 0
-    for num in numbers:
-        total += num
-    return total
+    """Compute the sum of a list of numbers."""
+    return sum(numbers)
 
 
 def slow_multiply(numbers):
