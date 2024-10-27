@@ -1,16 +1,21 @@
 def inefficient_function(data):
-    """Return a list of unique elements from data."""
-    return list(dict.fromkeys(data))
+    seen = set()
+    result = []
+    for item in data:
+        if item not in seen:
+            result.append(item)
+            seen.add(item)
+    return result
 
 
 def slow_sum(numbers):
-    """Return the sum of all elements in the iterable."""
-    return sum(num for num in numbers)
+    total = 0
+    for num in numbers:
+        total += num
+    return total
 
 
 def slow_multiply(numbers):
-    if not numbers:
-        raise ValueError('Input list is empty')
     product = 1
     for num in numbers:
         product *= num
